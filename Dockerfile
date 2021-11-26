@@ -4,14 +4,14 @@ FROM alpine:3.12
 
 MAINTAINER Just van den Broecke<just@justobjects.nl>
 
-ARG JMETER_VERSION="5.3"
+ARG JMETER_VERSION="5.4"
 ENV JMETER_HOME /opt/apache-jmeter-${JMETER_VERSION}
 ENV	JMETER_BIN	${JMETER_HOME}/bin
 ENV	JMETER_DOWNLOAD_URL  https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-${JMETER_VERSION}.tgz
 
 # Install extra packages
 # Set TimeZone, See: https://github.com/gliderlabs/docker-alpine/issues/136#issuecomment-612751142
-ARG TZ="Europe/Amsterdam"
+ARG TZ="America/Los_Angeles"
 ENV TZ ${TZ}
 RUN    apk update \
 	&& apk upgrade \
