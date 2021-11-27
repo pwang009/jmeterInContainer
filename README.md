@@ -14,7 +14,7 @@ This public github repo is inspired by https://github.com/justb4/docker-jmeter.g
    causes an issue on deletion to the subsequent runs.  This changes has been validated in the ubuntu 20.04
    in WSL 2 on Windows 10 machine
 2. Another test example added in the test/lbh folder to test restful api
-   The use case is that assuming you have api in 2 different environments, prod and qa.  You want to run perf
+   The use case is that assuming you have restful api in 2 different environments, prod and qa.  You want to run perf
    test against both environments.  To accomplish that, follow the steps below  
    a.  Define your api endpoint in the param.Data.csv file  
    b.  export parameter file as environment variable, e.g. export PARAM_FILE=prod/param.Data.csv  
