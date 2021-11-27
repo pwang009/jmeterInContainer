@@ -164,3 +164,7 @@ Thanks to https://github.com/hauptmedia/docker-jmeter
 and https://github.com/hhcordero/docker-jmeter-server for providing
 the Dockerfiles that inspired me.   @wilsonmar for contributing detailed instructions. Others
 that tested/reported after version updates.
+
+
+## Credits 2
+This public github repo is inspired by https://github.com/justb4/docker-jmeter.git 
