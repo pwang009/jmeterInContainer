@@ -9,7 +9,7 @@ This public github repo is inspired by https://github.com/justb4/docker-jmeter.g
 ## Major Changes Made
 
 1. In run.sh, add user and group with -u switch.  So the last line of the file becomes  
-   docker run --rm --name ${NAME} -u 1000:1000 -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@
+   docker run --rm --name ${NAME} -u 1000:1000 -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@  
    If the -u switch is left out, files created in the Report folder is going to be owned by root, which 
    causes an issue on deletion to the subsequent runs.  This changes has been validated in the ubuntu 20.04
    in WSL 2 on Windows 10 machine
