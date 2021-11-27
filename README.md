@@ -1,7 +1,27 @@
 [![Docker Build](https://img.shields.io/docker/automated/justb4/jmeter.svg)](https://hub.docker.com/r/justb4/jmeter)
 [![Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/justb4)
 
-# Apache Jmeter In Docker Container
+# Apache Jmeter v5.4 Running In A Docker Container
+
+## Credits 
+This public github repo is inspired by https://github.com/justb4/docker-jmeter.git.  
+
+## Major Changes Made
+
+1. In run.sh, add user and group with -u switch.  So the last line of the file becomes
+   docker run --rm --name ${NAME} -u 1000:1000 -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@
+   If the -u switch is left out, files created in the Report folder is going to be owned by root, which 
+   causes an issue on deletion to the subsequent runs.  This changes has been validated in the ubuntu 20.04
+   in WSL 2 on Windows 10 machine
+2. Another test example added in the test/lbh folder to test restful api
+   The use case is that assuming you have api in 2 different environments, prod and qa.  You want to run perf
+   test against both environments.  To accomplish that, follow the steps below
+   a.  Define your api endpoint in the param.Data.csv file
+   b.  export parameter file as environment variable, e.g. export PARAM_FILE=prod/param.Data.csv
+   c.  run ./lbh.test.sh script in the project root directory
+
+## Following documentation is from original repo
+
 ## Image on Docker Hub
 
 Docker image for [Apache JMeter](http://jmeter.apache.org).
