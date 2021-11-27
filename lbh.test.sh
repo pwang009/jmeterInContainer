@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # Test the JMeter Docker image using a trivial test plan.
+export PARAM_FILE="params.Data.csv"
 
 T_DIR=tests/lbh
 T_PLAN=lbh.product.list
@@ -13,6 +14,7 @@ mkdir -p ${R_DIR}
 rm -f ${T_DIR}/${T_PLAN}.jtl ${T_DIR}/jmeter.log  > /dev/null 2>&1
 
 ./run.sh -Dlog_level.jmeter=DEBUG \
+	-JPARAM_FILE=${PARAM_FILE}
 	-n -t ${T_DIR}/${T_PLAN}.jmx -l ${T_DIR}/${T_PLAN}.jtl -j ${T_DIR}/jmeter.log \
 	-e -o ${R_DIR}
 
