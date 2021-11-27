@@ -19,7 +19,7 @@ This public github repo is inspired by https://github.com/justb4/docker-jmeter.g
    The use case is that assuming you have restful api in 2 different environments, prod and qa.  You want to run perf
    test against both environments.  To accomplish that, follow the steps below  
    a.  Define your api endpoint in the environment param.Data.csv file, e.g. qa/param.Data.csv     
-   b.  export parameter file as environment variable, e.g. export PARAM_FILE=prod/param.Data.csv  
+   b.  export parameter file as environment variable, e.g. export PARAM_FILE=qa/param.Data.csv  
    c.  run ./lbh.test.sh script in the project root directory  
 
 ## Following documentation is from original repo
