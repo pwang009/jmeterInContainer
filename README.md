@@ -13,7 +13,7 @@ This public github repo is inspired by https://github.com/justb4/docker-jmeter.g
    docker run --rm --name ${NAME} -u 1000:1000 -i -v ${PWD}:${PWD} -w ${PWD} ${IMAGE} $@  
       
    If the -u switch is left out, files created in the Report folder is going to be owned by root, which 
-   causes an issue on deletion to the subsequent runs.  This changes has been validated in the ubuntu 20.04
+   causes an issue on deletion in the subsequent runs.  This changes has been validated in the ubuntu 20.04
    in WSL 2 on Windows 10 machine
 2. Another test example added in the test/lbh folder to test restful api
    The use case is that assuming you have restful api in 2 different environments, prod and qa.  You want to run perf
