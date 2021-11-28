@@ -14,7 +14,7 @@ This public github repo is inspired by https://github.com/justb4/docker-jmeter.g
       
    If the -u switch is left out, files created in the Report folder is going to be owned by root, which 
    causes an issue on deletion in the subsequent runs.  This changes has been validated in the ubuntu 20.04
-   in WSL 2 on Windows 10 machine
+   in WSL 2 on Windows 10 machine.  Check Specific section below for the run.sh command.  
 2. Another test example added in the test/lbh folder to test restful api
    The use case is that assuming you have restful api in 2 different environments, prod and qa.  You want to run perf
    test against both environments.  To accomplish that, follow the steps below  
